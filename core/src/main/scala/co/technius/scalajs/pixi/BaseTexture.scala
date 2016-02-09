@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 class BaseTexture(
     val source: Image | Canvas,
     var scaleMode: Int = ???,
-    var resolution: Double) extends js.Object {
+    var resolution: Double) extends Pixi.utils.EventEmitter {
 
   var imageUrl: String = js.native
 

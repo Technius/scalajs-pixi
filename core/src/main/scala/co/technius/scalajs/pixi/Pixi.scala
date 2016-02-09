@@ -20,4 +20,23 @@ object Pixi extends js.Object {
     @JSName("LINEAR")  val Linear:  Int = js.native
     @JSName("NEAREST") val Nearest: Int = js.native
   }
+
+  @js.native
+  object utils extends js.Object {
+    @js.native
+    class EventEmitter extends js.Object {
+      def listeners(event: String): js.Array[js.Function] = js.native
+      def emit(event: String, args: js.Any*): Boolean = js.native
+      def on(event: String, fn: js.Function): EventEmitter = js.native
+      def once(event: String, fn: js.Function): EventEmitter = js.native
+      def removeListener(event: String, fn: js.Function): EventEmitter = js.native
+      def removeAllListeners(event: String): EventEmitter = js.native
+
+      def off(event: String, fn: js.Function): EventEmitter = js.native
+      def addListener(event: String, fn: js.Function): EventEmitter = js.native
+    }
+  }
+
+  @js.native
+  val interaction: PixiInteraction.type = js.native
 }

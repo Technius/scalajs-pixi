@@ -11,7 +11,7 @@ class SystemRenderer(
     system: String,
     width: Int,
     height: Int,
-    options: js.Object) extends js.Object {
+    options: js.Object) extends Pixi.utils.EventEmitter {
 
   var autoResize: Boolean = js.native
   var backgroundColor: Int = js.native

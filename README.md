@@ -1,7 +1,7 @@
 # Scala.js facades for Pixi.js
 
 This is an experimental library that provides facades for
-[Pixi.js](https://lhorie.github.io/mithril/index.html). It is untested and
+[Pixi.js](http://pixijs.com/). It is untested and
 incomplete (and will probably stay that way for a while), so it's
 highly likely that it currently doesn't work. Feel free to try it out, though.
 

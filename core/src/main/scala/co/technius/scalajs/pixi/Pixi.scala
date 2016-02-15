@@ -36,7 +36,4 @@ object Pixi extends js.Object {
       def addListener(event: String, fn: js.Function): EventEmitter = js.native
     }
   }
-
-  @js.native
-  val interaction: PixiInteraction.type = js.native
 }

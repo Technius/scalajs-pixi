@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 @JSName("PIXI.DisplayObject")
 @js.native
 trait DisplayObject extends Pixi.utils.EventEmitter
-    with Pixi.interaction.InteractiveTarget {
+    with interaction.InteractiveTarget {
 
   var alpha: Double = js.native
   var cacheAsBitmap: Boolean = js.native

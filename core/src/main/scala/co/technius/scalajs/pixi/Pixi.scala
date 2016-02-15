@@ -9,6 +9,8 @@ object Pixi extends js.Object {
   def autoDetectRenderer(width: Int, height: Int): SystemRenderer = js.native
   def autoDetectRenderer(width: Int, height: Int, options: js.Object): SystemRenderer = js.native
 
+  val loader: loaders.Loader = js.native
+
   val BaseTexture: BaseTextureStatic = js.native
   val Texture: TextureStatic = js.native
   val Sprite: SpriteStatic = js.native
@@ -27,13 +29,13 @@ object Pixi extends js.Object {
     class EventEmitter extends js.Object {
       def listeners(event: String): js.Array[js.Function] = js.native
       def emit(event: String, args: js.Any*): Boolean = js.native
-      def on(event: String, fn: js.Function): EventEmitter = js.native
-      def once(event: String, fn: js.Function): EventEmitter = js.native
-      def removeListener(event: String, fn: js.Function): EventEmitter = js.native
-      def removeAllListeners(event: String): EventEmitter = js.native
+      def on(event: String, fn: js.Function): this.type = js.native
+      def once(event: String, fn: js.Function): this.type = js.native
+      def removeListener(event: String, fn: js.Function): this.type = js.native
+      def removeAllListeners(event: String): this.type = js.native
 
-      def off(event: String, fn: js.Function): EventEmitter = js.native
-      def addListener(event: String, fn: js.Function): EventEmitter = js.native
+      def off(event: String, fn: js.Function): this.type = js.native
+      def addListener(event: String, fn: js.Function): this.type = js.native
     }
   }
 }

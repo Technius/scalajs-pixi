@@ -27,7 +27,7 @@ class Loader(_baseUrl: js.UndefOr[String] = ???, concurrency: js.UndefOr[Int] = 
   def reset(): Unit = js.native
 
   def load(): Loader = js.native
-  def load(cb: js.Function2[Loader, ResourceDictionary, Unit]): Loader = js.native
+  def load(cb: js.Function2[Loader, ResourceDictionary, _]): Loader = js.native
 }
 
 object LoaderDSL {
@@ -38,23 +38,23 @@ object LoaderDSL {
 
   object LoadEvent {
 
-    case object Complete extends LoadEvent[js.Function2[Loader, js.Any, Unit]] {
+    case object Complete extends LoadEvent[js.Function2[Loader, js.Any, _]] {
       val ev = "complete"
     }
 
-    case object Error extends LoadEvent[js.Function3[js.Error, Loader, Resource, Unit]] {
+    case object Error extends LoadEvent[js.Function3[js.Error, Loader, Resource, _]] {
       val ev = "error"
     }
 
-    case object Load extends LoadEvent[js.Function2[Loader, Resource, Unit]] {
+    case object Load extends LoadEvent[js.Function2[Loader, Resource, _]] {
       val ev = "load"
     }
 
-    case object Progress extends LoadEvent[js.Function2[Loader, Resource, Unit]] {
+    case object Progress extends LoadEvent[js.Function2[Loader, Resource, _]] {
       val ev = "progress"
     }
 
-    case object Start extends LoadEvent[js.Function1[Loader, Unit]] {
+    case object Start extends LoadEvent[js.Function1[Loader, _]] {
       val ev = "start"
     }
 

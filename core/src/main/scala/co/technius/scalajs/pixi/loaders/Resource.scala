@@ -25,7 +25,7 @@ class Resource extends pixi.Pixi.utils.EventEmitter {
   def complete(): Unit = js.native
 
   def load(): Unit = js.native
-  def load(cb: js.Function0[Unit]): Unit = js.native
+  def load(cb: js.Function0[_]): Unit = js.native
 }
 
 @JSName("PIXI.loaders.Resource")

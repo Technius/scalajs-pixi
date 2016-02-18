@@ -7,8 +7,11 @@ import co.technius.scalajs.pixi.Pixi
 
 @JSName("PIXI.loaders.Loader")
 @js.native
-class Loader(_baseUrl: js.UndefOr[String] = ???, concurrency: js.UndefOr[Int] = ???)
-    extends Pixi.utils.EventEmitter {
+class Loader extends Pixi.utils.EventEmitter {
+
+  def this(baseUrl: String) = this()
+  def this(concurrency: Int) = this()
+  def this(baseUrl: String, concurrency: Int) = this()
 
   val baseUrl: String = js.native
   val progress: Double = js.native

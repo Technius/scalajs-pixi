@@ -18,8 +18,15 @@ class Loader extends Pixi.utils.EventEmitter {
   val loading: Boolean = js.native
   val resources: ResourceDictionary = js.native
 
-  // TODO: More thorough facade
+  // Ugly mess because can't do overloading with default args
   def add(name: String, url: String): Loader = js.native
+  def add(name: String, url: String, options: LoaderOptions): Loader = js.native
+  def add(name: String, url: String, cb: js.Function0[_]): Loader = js.native
+  def add(name: String, url: String, options: LoaderOptions, cb: js.Function0[_]): Loader = js.native
+  def add(url: String): Loader = js.native
+  def add(url: String, options: LoaderOptions): Loader = js.native
+  def add(url: String, cb: js.Function0[_]): Loader = js.native
+  def add(url: String, options: LoaderOptions, cb: js.Function0[_]): Loader = js.native
 
   def before(fn: js.Function): Loader = js.native
   def pre(fn: js.Function): Loader = js.native

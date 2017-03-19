@@ -36,3 +36,5 @@ trait BaseTextureStatic extends js.Object {
   def fromCanvas(canvas: Canvas, scaleMode: Int): BaseTexture = js.native
   def fromImage(imageUrl: String, crossorigin: Boolean = ???, scaleMode: Int = ???): BaseTexture = js.native
 }
+
+@JSImport("pixi.js", "BaseTexture") @js.native object BaseTexture extends BaseTextureStatic

@@ -21,3 +21,5 @@ trait TextureStatic extends js.Object {
   def fromImage(imageUrl: String): Texture = js.native
   def fromImage(imageUrl: String, crossorigin: Boolean, scaleMode: Int): Texture = js.native
 }
+
+@JSImport("pixi.js", "Texture") @js.native object Texture extends TextureStatic

@@ -16,3 +16,5 @@ class Sprite(val texture: Texture) extends Container {
 trait SpriteStatic extends js.Object {
   def fromImage(imageId: String): Sprite = js.native
 }
+
+@JSImport("pixi.js", "Sprite") @js.native object Sprite extends SpriteStatic

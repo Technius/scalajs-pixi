@@ -12,6 +12,7 @@ class Graphics extends Container {
   def drawRect(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
   def drawRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: Double): Graphics = js.native
   def endFill(): Graphics = js.native
+  //@deprecated("Call generateTexture on a renderer instead", "Pixi.js 4")
   def generateTexture(resolution: Int, scaleMode: Int): Texture = js.native
   def lineStyle(lineWidth: Double, color: Double, alpha: Double): Graphics = js.native
   def lineTo(x: Double, y: Double): Graphics = js.native

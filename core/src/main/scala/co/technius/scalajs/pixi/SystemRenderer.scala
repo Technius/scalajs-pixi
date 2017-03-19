@@ -24,4 +24,6 @@ class SystemRenderer(
 
   def resize(width: Int, height: Int): Unit = js.native
   def render(`object`: DisplayObject): Unit = js.native
+
+  def generateTexture(displayObject: DisplayObject, scaleMode: Int, resolution: Double): Texture = js.native
 }

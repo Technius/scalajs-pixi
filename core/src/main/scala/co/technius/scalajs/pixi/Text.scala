@@ -8,16 +8,33 @@ import scala.scalajs.js.annotation._
 @js.native
 class Text(var text: String, var style: TextStyle) extends Sprite(???)
 
-@JSExportAll
+// JSImport with js.native doesn't work
+@ScalaJSDefined
 class TextStyle(
-  var font: String | js.UndefOr[Nothing] = js.undefined,
-  var fill: String | Int | js.UndefOr[Nothing] = js.undefined,
-  var align: String | js.UndefOr[Nothing] = js.undefined,
-  var stroke: String | Int | js.UndefOr[Nothing] = js.undefined,
-  var strokeThickness: Int | js.UndefOr[Nothing] = js.undefined,
-  var wordWrap: Boolean | js.UndefOr[Nothing] = js.undefined,
-  var wordWrapWidth: Int | js.UndefOr[Nothing] = js.undefined,
-  var dropShadow: Boolean | js.UndefOr[Nothing] = js.undefined,
-  var dropShadowColor: String | js.UndefOr[Nothing] = js.undefined,
-  var dropShadowAngle: Double | js.UndefOr[Nothing] = js.undefined,
-  var dropShadowDistance: Int | js.UndefOr[Nothing] = js.undefined)
+  var align: String = "left",
+  var breakWords: Boolean = false,
+  var dropShadow: Boolean = false,
+  var dropShadowAlpha: Double = 1.0,
+  var dropShadowAngle: Double = math.Pi / 6,
+  var dropShadowBlur: Double = 0,
+  var dropShadowColor: String = "#000000",
+  var dropShadowDistance: Int = 5,
+  var fill: String | js.Array[String] | Int = "black",
+  var fillGradientType: Number = Pixi.TextGradient.LinearHorizontal,
+  var fillGradientStops: js.Array[Double] = js.Array(),
+  var fontFamily: String | js.Array[String] = "Arial",
+  var fontSize: Int | String = 26,
+  var fontStyle: String = "normal",
+  var fontVariant: String = "normal",
+  var fontWeight: String = "normal",
+  var letterSpacing: Double = 0,
+  var lineHeight: js.UndefOr[Double] = js.undefined,
+  var miterLimit: Double = 10,
+  var padding: Double = 0,
+  var stroke: String | Int = "black",
+  var strokeThickness: Int = 0,
+  var trim: Boolean = false,
+  var textBaseline: String = "alphabetic",
+  var wordWrap: Boolean = false,
+  var wordWrapWidth: Int = 100
+) extends js.Object

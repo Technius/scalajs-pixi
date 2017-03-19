@@ -11,12 +11,12 @@ object ExampleApp extends js.JSApp {
     dom.document.body.appendChild(renderer.view)
 
     val root = new pixi.Container
-    val shapeTexture =
+    val shapeGfx =
       new pixi.Graphics()
         .beginFill(0xFFAA00, 1)
         .drawRect(0, 0, 50, 50)
         .endFill()
-        .generateTexture(1, pixi.Pixi.ScaleModes.Nearest)
+    val shapeTexture = renderer.generateTexture(shapeGfx, pixi.Pixi.ScaleModes.Nearest, 1)
 
     val minX, minY = 75
     val maxX, maxY = 525

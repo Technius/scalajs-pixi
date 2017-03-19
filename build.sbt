@@ -33,7 +33,7 @@ lazy val examples =
       libraryDependencies ++= Seq(
         "org.scala-js" %%% "scalajs-dom" % "0.9.1"
       ),
-      npmDependencies in Compile += "pixi.js" -> "3.0.7",
+      npmDependencies in Compile += "pixi.js" -> "4.2.2",
       npmDevDependencies in Compile += "json-loader" -> "*",
       webpackConfigFile := Some(baseDirectory.value / "webpack.config.js")
     )

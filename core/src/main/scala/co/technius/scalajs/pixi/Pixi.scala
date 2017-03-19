@@ -23,6 +23,13 @@ object Pixi extends js.Object {
     @JSName("NEAREST") val Nearest: Int = js.native
   }
 
+  @JSName("TEXT_GRADIENT")
+  @js.native
+  object TextGradient extends js.Object {
+    @JSName("LINEAR_VERTICAL") val LinearVertical: Double = js.native
+    @JSName("LINEAR_HORIZONTAL") val LinearHorizontal: Double = js.native
+  }
+
   @js.native
   object utils extends js.Object {
     @js.native

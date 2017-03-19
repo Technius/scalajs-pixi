@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Container")
+@JSImport("pixi.js", "Container")
 @js.native
 class Container extends DisplayObject {
   var width: Double = js.native

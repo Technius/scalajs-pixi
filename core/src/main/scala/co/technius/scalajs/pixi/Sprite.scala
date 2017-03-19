@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Sprite")
+@JSImport("pixi.js", "Sprite")
 @js.native
 class Sprite(val texture: Texture) extends Container {
   var anchor: Point = js.native

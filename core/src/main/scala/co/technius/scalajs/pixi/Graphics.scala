@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Graphics")
+@JSImport("pixi.js", "Graphics")
 @js.native
 class Graphics extends Container {
   def beginFill(color: Double, alpha: Double): Graphics = js.native

@@ -20,7 +20,7 @@ object ExampleApp extends js.JSApp {
 
     val minX, minY = 75
     val maxX, maxY = 525
-    
+
     val shapeNW = initBoxAndAdd(shapeTexture, minX, minY, root)
     val shapeNE = initBoxAndAdd(shapeTexture, maxX, minY, root)
     val shapeSW = initBoxAndAdd(shapeTexture, minX, maxY, root)

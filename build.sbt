@@ -33,7 +33,9 @@ lazy val examples =
       libraryDependencies ++= Seq(
         "org.scala-js" %%% "scalajs-dom" % "0.9.1"
       ),
-      jsDependencies += "org.webjars" % "pixi.js" % "3.0.7" / "pixi.js"
+      npmDependencies in Compile += "pixi.js" -> "3.0.7",
+      npmDevDependencies in Compile += "json-loader" -> "*",
+      webpackConfigFile := Some(baseDirectory.value / "webpack.config.js")
     )
-    .enablePlugins(ScalaJSPlugin)
+    .enablePlugins(ScalaJSPlugin, ScalaJSBundlerPlugin)
     .dependsOn(core)

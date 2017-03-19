@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Point")
+@JSImport("pixi.js", "Point")
 @js.native
 class Point(var x: Double, var y: Double) extends js.Object {
   def copy(p: Point): Unit = js.native

@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Texture")
+@JSImport("pixi.js", "Texture")
 @js.native
 class Texture(baseTexture: BaseTexture) extends js.Object {
   var height: Int = js.native

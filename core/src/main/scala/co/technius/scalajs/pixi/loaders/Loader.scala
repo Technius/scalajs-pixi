@@ -5,7 +5,7 @@ import scala.scalajs.js.annotation._
 
 import co.technius.scalajs.pixi.Pixi
 
-@JSName("PIXI.loaders.Loader")
+@JSImport("pixi.js", "loaders.Loader")
 @js.native
 class Loader extends Pixi.utils.EventEmitter {
 

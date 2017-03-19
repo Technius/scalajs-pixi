@@ -3,7 +3,7 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI")
+@JSImport("pixi.js", JSImport.Namespace)
 @js.native
 object Pixi extends js.Object {
   def autoDetectRenderer(width: Int, height: Int): SystemRenderer = js.native

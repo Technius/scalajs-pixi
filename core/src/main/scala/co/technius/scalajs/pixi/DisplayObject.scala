@@ -3,9 +3,9 @@ package co.technius.scalajs.pixi
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.DisplayObject")
+@JSImport("pixi.js" , "DisplayObject")
 @js.native
-trait DisplayObject extends Pixi.utils.EventEmitter
+abstract class DisplayObject extends Pixi.utils.EventEmitter
     with interaction.InteractiveTarget {
 
   var alpha: Double = js.native

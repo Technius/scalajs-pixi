@@ -3,7 +3,6 @@ package co.technius.scalajs.pixi.interaction
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.interaction.InteractiveTarget")
 @js.native
 trait InteractiveTarget extends js.Object {
   var interactive: Boolean = js.native

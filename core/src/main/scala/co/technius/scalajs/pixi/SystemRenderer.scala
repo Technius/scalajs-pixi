@@ -5,7 +5,7 @@ import scala.scalajs.js.annotation._
 
 import org.scalajs.dom.html
 
-@JSName("PIXI.SystemRenderer")
+@JSImport("pixi.js", "SystemRenderer")
 @js.native
 class SystemRenderer(
     system: String,

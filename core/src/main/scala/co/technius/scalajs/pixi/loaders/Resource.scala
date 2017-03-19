@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 import co.technius.scalajs.pixi
 
-@JSName("PIXI.loaders.Resource")
+@JSImport("pixi.js", "loaders.Resource")
 @js.native
 class Resource extends pixi.Pixi.utils.EventEmitter {
   val name: String = js.native
@@ -28,7 +28,7 @@ class Resource extends pixi.Pixi.utils.EventEmitter {
   def load(cb: js.Function0[_]): Unit = js.native
 }
 
-@JSName("PIXI.loaders.Resource")
+@JSImport("pixi.js", "loaders.Resource")
 @js.native
 object Resource extends js.Object{
 

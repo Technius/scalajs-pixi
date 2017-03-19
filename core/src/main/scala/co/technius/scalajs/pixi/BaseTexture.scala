@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.|
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.BaseTexture")
+@JSImport("pixi.js", "BaseTexture")
 @js.native
 class BaseTexture(
     val source: Image | Canvas,

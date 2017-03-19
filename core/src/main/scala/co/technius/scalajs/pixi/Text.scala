@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.|
 import scala.scalajs.js.annotation._
 
-@JSName("PIXI.Text")
+@JSImport("pixi.js", "Text")
 @js.native
 class Text(var text: String, var style: TextStyle) extends Sprite(???)
 

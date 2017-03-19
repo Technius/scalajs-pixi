@@ -1,7 +1,7 @@
 lazy val sharedSettings = Seq(
   version := "0.0.1-SNAPSHOT",
   organization := "co.technius.scalajs-pixi",
-  scalaVersion := "2.11.7",
+  scalaVersion := "2.11.8",
   scalacOptions ++= Seq(
     "-feature",
     "-deprecation",
@@ -19,8 +19,8 @@ lazy val core =
     .settings(
       name := """core""",
       libraryDependencies ++= Seq(
-        "org.scala-js" %%% "scalajs-dom" % "0.8.0",
-        "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+        "org.scala-js" %%% "scalajs-dom" % "0.9.1",
+        "org.scalatest" %% "scalatest" % "3.0.1" % "test"
       )
     )
     .enablePlugins(ScalaJSPlugin)
@@ -31,7 +31,7 @@ lazy val examples =
     .settings(
       name := """examples""",
       libraryDependencies ++= Seq(
-        "org.scala-js" %%% "scalajs-dom" % "0.8.0"
+        "org.scala-js" %%% "scalajs-dom" % "0.9.1"
       ),
       jsDependencies += "org.webjars" % "pixi.js" % "3.0.7" / "pixi.js"
     )

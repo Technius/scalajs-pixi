@@ -1,11 +1,10 @@
-import scala.scalajs.js
 import org.scalajs.dom
 
 import co.technius.scalajs.pixi
 
-object ExampleApp extends js.JSApp {
+object ExampleApp {
 
-  def main(): Unit = {
+  def main(args: Array[String]): Unit = {
     val renderer = pixi.Pixi.autoDetectRenderer(600, 600)
     dom.document.body.appendChild(renderer.view)
 

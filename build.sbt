@@ -36,6 +36,7 @@ lazy val examples =
       ),
       npmDependencies in Compile += "pixi.js" -> "4.2.2",
       npmDevDependencies in Compile += "json-loader" -> "*",
+      scalaJSUseMainModuleInitializer := true,
       webpackConfigFile := Some(baseDirectory.value / "webpack.config.js")
     )
     .enablePlugins(ScalaJSPlugin, ScalaJSBundlerPlugin)

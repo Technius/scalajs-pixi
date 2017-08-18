@@ -1,6 +1,5 @@
 import scala.scalajs.js
 import org.scalajs.dom
-import org.scalajs.dom.html
 
 import co.technius.scalajs.pixi
 

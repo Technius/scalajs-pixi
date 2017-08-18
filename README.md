@@ -32,7 +32,7 @@ addSbtPlugin("ch.epfl.scala" % "sbt-scalajs-bundler" % "0.5.0")
 
 Then, add the following lines to `build.sbt`:
 ```scala
-npmDependencies in Compile += "pixi.js" -> "3.0.7",
+npmDependencies in Compile += "pixi.js" -> "4.2.2",
 npmDevDependencies in Compile += "json-loader" -> "*",
 webpackConfigFile := Some(baseDirectory.value / "webpack.config.js")
 ```

@@ -1,20 +1,22 @@
-lazy val sharedSettings = Seq(
-  version := "0.0.1-SNAPSHOT",
-  organization := "co.technius.scalajs-pixi",
-  scalaVersion := "2.11.8",
-  scalacOptions ++= Seq(
-    "-feature",
-    "-deprecation",
-    "-Xlint",
-    "-Xfatal-warnings"
+lazy val root = (project in file("."))
+  .settings(
+    inThisBuild(Seq(
+      version := "0.0.1-SNAPSHOT",
+      organization := "co.technius.scalajs-pixi",
+      crossScalaVersions := Seq("2.12.3", "2.11.8"),
+      scalaVersion := crossScalaVersions.value.head,
+      scalacOptions ++= Seq(
+        "-feature",
+        "-deprecation",
+        "-Xlint",
+        "-Xfatal-warnings"
+      )
+    ))
   )
-)
-
-lazy val root = (project in file(".")).aggregate(core, examples)
+  .aggregate(core, examples)
 
 lazy val core =
   Project("core", file("core"))
-    .settings(sharedSettings: _*)
     .settings(Publish.settings: _*)
     .settings(
       name := """core""",
@@ -27,7 +29,6 @@ lazy val core =
 
 lazy val examples =
   Project("examples", file("examples"))
-    .settings(sharedSettings: _*)
     .settings(
       name := """examples""",
       libraryDependencies ++= Seq(

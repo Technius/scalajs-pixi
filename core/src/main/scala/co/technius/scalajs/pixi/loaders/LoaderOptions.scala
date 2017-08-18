@@ -2,7 +2,6 @@ package co.technius.scalajs.pixi.loaders
 
 import scala.scalajs.js
 import scala.scalajs.js.|
-import scala.scalajs.js.annotation._
 
 @js.native
 trait LoaderOptions extends js.Object {
